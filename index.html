@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrimonial Biodata - Deepak Sharma</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 50px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '🕉️';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 150px;
+            opacity: 0.1;
+        }
+        
+        .header::after {
+            content: '🕉️';
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            font-size: 150px;
+            opacity: 0.1;
+        }
+        
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            color: white;
+            font-size: 42px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header p {
+            color: rgba(255,255,255,0.9);
+            font-size: 16px;
+            font-weight: 300;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+            background: linear-gradient(to right, #f8f9ff, #ffffff);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #f093fb;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #764ba2;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .section-title::before {
+            font-size: 28px;
+        }
+        
+        .basic .section-title::before { content: '👤'; }
+        .education .section-title::before { content: '🎓'; }
+        .profession .section-title::before { content: '💼'; }
+        .family .section-title::before { content: '👨‍👩‍👧'; }
+        .gotra .section-title::before { content: '🔱'; }
+        
+        .detail-row {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+        
+        .label {
+            font-weight: 600;
+            color: #555;
+            font-size: 14px;
+        }
+        
+        .value {
+            color: #333;
+            font-size: 14px;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+        }
+        
+        .photo-section {
+            padding: 40px;
+            text-align: center;
+            background: linear-gradient(to bottom, #ffffff, #f8f9ff);
+        }
+        
+        .profile-photo {
+            max-width: 350px;
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(118, 75, 162, 0.3);
+            border: 5px solid white;
+            outline: 2px solid #f093fb;
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
+            text-align: center;
+            color: white;
+        }
+        
+        .footer p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .decorative-border {
+            height: 5px;
+            background: linear-gradient(90deg, #f093fb 0%, #f5576c 50%, #667eea 100%);
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .detail-row {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+            
+            .header h1 {
+                font-size: 32px;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="decorative-border"></div>
+        
+        <div class="header">
+            <h1>Deepak Sharma</h1>
+            <p>Matrimonial Biodata</p>
+        </div>
+        
+        <div class="content">
+            <div class="section basic">
+                <div class="section-title">Basic Details</div>
+                <div class="detail-row">
+                    <div class="label">Full Name</div>
+                    <div class="value"><span class="highlight">Deepak Sharma</span></div>
+                </div>
+                <div class="detail-row">
+                    <div class="label">Date of Birth / Age</div>
+                    <div class="value">24-03-2000 (25 years)</div>
+                </div>
+                <div class="detail-row">
+                    <div class="label">Height</div>
+                    <div class="value">5ft 10inch</div>
+                </div>
+                <div class="detail-row">
+                    <div class="label">Gender</div>
+                    <div class="value">Male</div>
+                </div>
+                <div class="detail-row">
+                    <div class="label">Religion / Caste</div>
+                    <div class="value">Hindu (Brahmin)</div>
+                </div>
+                <div class="detail-row">
+                    <div class="label">Mother Tongue</div>
+                    <div class="value">Hindi</div>
+                </div>
+                <div class="detail-row">
+                    <div class="label">Marital Status</div>
+                    <div class="value">Single</div>
+                </div>
+                <div class="detail-row">
+                    <div class="label">Current Location</div>
+                    <div class="value">Bengaluru</div>
+                </div>
+            </div>
+            
+            <div class="section education">
+                <div class="section-title">Education</div>
+                <div class="detail-row">
+                    <div class="label">Highest Qualification</div>
+                    <div class="value">Bachelor of Engineering (Computer Science)</div>
+                </div>
+                <div class="detail-row">
+                    <div class="label">College/University</div>
+                    <div class="value">Chitkara University, Himachal Pradesh</div>
+                </div>
+            </div>
+            
+            <div class="section profession">
+                <div class="section-title">Profession</div>
+                <div class="detail-row">
+                    <div class="label">Job Title</div>
+                    <div class="value">Software Development Engineer 1</div>
+                </div>
+                <div class="detail-row">
+                    <div class="label">Company</div>
+                    <div class="value"><span class="highlight">Juspay Technologies</span></div>
+                </div>
+                <div class="detail-row">
+                    <div class="label">Annual Income</div>
+                    <div class="value"><span class="highlight">₹22.5 Lakhs per Annum</span></div>
+                </div>
+                <div class="detail-row">
+                    <div class="label">Work Location</div>
+                    <div class="value">Bengaluru</div>
+                </div>
+            </div>
+            
+            <div class="section family">
+                <div class="section-title">Family Details</div>
+                <div class="detail-row">
+                    <div class="label">Father's Name</div>
+                    <div class="value">Mr. Shashi Kant Sharma (Teacher)</div>
+                </div>
+                <div class="detail-row">
+                    <div class="label">Mother's Name</div>
+                    <div class="value">Mrs. Gauri Sharma (Teacher)</div>
+                </div>
+                <div class="detail-row">
+                    <div class="label">Siblings</div>
+                    <div class="value">Aarti Sharma (Sister)</div>
+                </div>
+                <div class="detail-row">
+                    <div class="label">Family Values</div>
+                    <div class="value">Moderate</div>
+                </div>
+                <div class="detail-row">
+                    <div class="label">Family Type</div>
+                    <div class="value">Joint</div>
+                </div>
+                <div class="detail-row">
+                    <div class="label">Family Location</div>
+                    <div class="value">Agra</div>
+                </div>
+            </div>
+            
+            <div class="section gotra">
+                <div class="section-title">Gotra Details</div>
+                <div class="detail-row">
+                    <div class="label">Myself</div>
+                    <div class="value"><span class="highlight">Nagaich</span></div>
+                </div>
+                <div class="detail-row">
+                    <div class="label">Maternal Uncle</div>
+                    <div class="value">Bhendhal</div>
+                </div>
+                <div class="detail-row">
+                    <div class="label">Maternal Grandmother</div>
+                    <div class="value">Rawat</div>
+                </div>
+                <div class="detail-row">
+                    <div class="label">Paternal Grandmother</div>
+                    <div class="value">Lawaniya</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="photo-section">
+            <img src="" alt="Deepak Sharma" class="profile-photo">
+        </div>
+        
+        <div class="footer">
+            <p>For more information, please feel free to contact +91 8445813900</p>
+        </div>
+        
+        <div class="decorative-border"></div>
+    </div>
+</body>
+</html>
